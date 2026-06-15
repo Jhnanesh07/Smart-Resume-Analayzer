@@ -1,0 +1,20 @@
+SKILLS = [
+    "python",
+    "java",
+    "c",
+    "c++",
+    "sql",
+    "html",
+    "css",
+    "javascript",
+    "react",
+    "angular",
+    "nodejs",
+    "flask",
+    "django",
+    "mongodb",
+    "mysql",
+    "git",
+    "github",
+    "aws"
+]

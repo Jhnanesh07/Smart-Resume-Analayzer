@@ -1,0 +1,29 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container{
+    width: 70%;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.score{
+    color: green;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.skills{
+    text-align: left;
+    margin-left: 100px;
+}
+
+h1{
+    color: #2c3e50;
+}

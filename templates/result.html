@@ -1,0 +1,33 @@
+<div class="container">
+
+    <h1>Smart Resume Analyzer</h1>
+
+    <h2 class="score">
+        ATS Score: {{ score }}%
+    </h2>
+
+    <div class="skills">
+
+        <h3>Detected Skills</h3>
+
+        <ul>
+            {% for skill in found_skills %}
+                <li>✅ {{ skill }}</li>
+            {% endfor %}
+        </ul>
+
+        <h3>Missing Skills</h3>
+
+        <ul>
+            {% for skill in missing_skills %}
+                <li>❌ {{ skill }}</li>
+            {% endfor %}
+        </ul>
+
+    </div>
+
+    <br>
+
+    <a href="/">Analyze Another Resume</a>
+
+</div>
