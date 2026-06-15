@@ -1,41 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Analysis Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
 <div class="container">
 
-    <h1>Smart Resume Analyzer</h1>
+    <div class="card">
 
-    <h2 class="score">
-        ATS Score: {{ score }}%
-    </h2>
+        <h1 class="title">
+            Smart Resume Analyzer
+        </h1>
 
-    <div class="skills">
+        <div class="score">
+            ATS Match Score: {{ match_score }}%
+        </div>
 
-        <h3>Detected Skills</h3>
+        <br>
 
-        <ul>
-            {% for skill in found_skills %}
-                <li>✅ {{ skill }}</li>
-            {% endfor %}
-        </ul>
+        <div class="progress-bar">
+            <div class="progress"
+                 style="width: {{ match_score }}%;">
+            </div>
+        </div>
 
-        <h3>Missing Skills</h3>
+    </div>
 
-        <ul>
-            {% for skill in missing_skills %}
-                <li>❌ {{ skill }}</li>
-            {% endfor %}
-        </ul>
+    <div class="card">
 
-        <h3>Suggestions</h3>
+        <h2>✅ Matched Skills</h2>
 
         <ul>
-            {% for suggestion in suggestions %}
-                <li>💡 {{ suggestion }}</li>
+            {% for skill in matched_skills %}
+                <li class="found">{{ skill }}</li>
             {% endfor %}
         </ul>
 
     </div>
 
-    <br>
+    <div class="card">
 
-    <a href="/">Analyze Another Resume</a>
+        <h2>❌ Missing Required Skills</h2>
+
+        <ul>
+            {% for skill in missing_jd_skills %}
+                <li class="missing">{{ skill }}</li>
+            {% endfor %}
+        </ul>
+
+    </div>
+
+    <div class="card">
+
+        <h2>💡 Suggestions</h2>
+
+        <ul>
+            {% for suggestion in suggestions %}
+                <li class="suggestion">{{ suggestion }}</li>
+            {% endfor %}
+        </ul>
+
+    </div>
+
+    <div class="center">
+
+        <a href="/" class="button">
+            Analyze Another Resume
+        </a>
+
+    </div>
 
 </div>
+
+</body>
+</html>

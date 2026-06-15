@@ -2,23 +2,60 @@
 <html>
 <head>
     <title>Smart Resume Analyzer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
-    <h1>Smart Resume Analyzer</h1>
+    <div class="upload-container">
 
-    <p>Upload your resume and get ATS score</p>
-    <form action="/analyze"
+        <div class="upload-card">
+
+            <h1 class="main-title">
+                Smart Resume Analyzer
+            </h1>
+
+            <p class="subtitle">
+                Upload your resume and analyze ATS compatibility
+            </p>
+
+            <form action="/analyze"
       method="POST"
       enctype="multipart/form-data">
 
-    <input type="file" name="resume">
+    <input
+        type="file"
+        name="resume"
+        class="file-input"
+        required>
 
-    <button type="submit">
+    <br><br>
+
+    <textarea
+        name="job_description"
+        class="job-description"
+        placeholder="Paste Job Description Here..."
+        rows="8"
+        required>
+    </textarea>
+
+    <br><br>
+
+    <button
+        type="submit"
+        class="analyze-btn">
+
         Analyze Resume
+
     </button>
 
 </form>
+
+        </div>
+
+    </div>
 
 </body>
 </html>
