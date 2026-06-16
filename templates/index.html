@@ -18,12 +18,26 @@
             </h1>
 
             <p class="subtitle">
-                Upload your resume and analyze ATS compatibility
+
+                AI-Powered ATS Resume Matching Platform
+
             </p>
 
-            <form action="/analyze"
+            <p class="description">
+
+                Analyze resumes against job descriptions,
+                identify skill gaps, and improve your chances
+                of getting shortlisted.
+
+            </p>
+
+<form action="/analyze"
       method="POST"
       enctype="multipart/form-data">
+
+    <h3 class="section-title">
+        Upload Resume
+    </h3>
 
     <input
         type="file"
@@ -32,6 +46,10 @@
         required>
 
     <br><br>
+
+    <h3 class="section-title">
+        Job Description
+    </h3>
 
     <textarea
         name="job_description"
@@ -52,6 +70,18 @@
     </button>
 
 </form>
+
+<div class="features">
+
+    <p>✓ ATS Match Score</p>
+
+    <p>✓ Skill Gap Analysis</p>
+
+    <p>✓ Resume Suggestions</p>
+
+    <p>✓ AI-Powered Matching</p>
+
+</div>
 
         </div>
 
